@@ -1,0 +1,19 @@
+* {
+  user-select: none;
+}
+
+#dragger {
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  border: 1px dashed white;
+  pointer-events: none;
+  display: none;
+}
+
+#dragger.visible {
+  display: block;
+}
+
+canvas {
+  border: 1px solid;
+}

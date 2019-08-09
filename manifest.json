@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "extension test",
+  "short_name": "extension test",
+  "version": "1.0.0",
+  "description": "extension test",
+  "web_accessible_resources": [
+    "index.html",
+    "index.js",
+    "index.css",
+    "jquery.js"
+  ],
+  "permissions": [
+    "tabs",
+    "downloads",
+    "storage",
+    "activeTab",
+    "declarativeContent"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": [
+        "index.js",
+        "html2canvas.js",
+        "jquery.js"
+      ],
+      "css": ["index.css"]
+    }
+  ]
+}
